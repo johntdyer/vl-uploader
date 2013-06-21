@@ -2,27 +2,21 @@
 bundler/setup
 flexmock/rspec
 fakeweb
-fauxhai
 fakefs/spec_helpers
 logger
 json
-chefspec
 json_spec
 guard/rspec
 time
-j_unit
-chef/application
 timecop
 simplecov
-chef/node
-chef/platform
 ).each{|lib| require lib}
 
 SimpleCov.start
 
 FakeWeb.allow_net_connect = false
 
-$:.push File.dirname(__FILE__) + "/../lib"
+$:.push File.dirname(__FILE__) + "/../vl/lib"
 
 RSpec.configure do |config|
     config.filter_run :focus => true
